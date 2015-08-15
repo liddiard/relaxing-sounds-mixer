@@ -1,0 +1,36 @@
+{
+  "name": "relaxing-sounds-mixer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "watchify -v -o dist/bundle.js -t scssify -t reactify src/app.jsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liddiard/relaxing-sounds-mixer.git"
+  },
+  "keywords": [
+    "relaxing",
+    "sounds",
+    "mixer",
+    "html5",
+    "audio"
+  ],
+  "author": "Harrison Liddiard <omniaura5@gmail.com> (http://harrisonliddiard.com)",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/liddiard/relaxing-sounds-mixer/issues"
+  },
+  "homepage": "https://github.com/liddiard/relaxing-sounds-mixer#readme",
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "reactify": "^1.1.1",
+    "scssify": "^0.3.5",
+    "watchify": "^3.3.1"
+  }
+}
