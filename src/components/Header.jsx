@@ -1,6 +1,7 @@
 var React = require('react');
 
-var Mixer = React.createClass({
+
+var Header = React.createClass({
   render: function() {
     return (
       <header>Are you not relaxed?</header>
@@ -8,4 +9,4 @@ var Mixer = React.createClass({
   }
 });
 
-module.exports = Mixer;
+module.exports = Header;

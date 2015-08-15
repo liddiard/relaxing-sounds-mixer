@@ -10,3 +10,24 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+.sound {
+    input[type=checkbox] {
+        $scale: 2;
+        -ms-transform: scale($scale); /* IE */
+        -moz-transform: scale($scale); /* FF */
+        -webkit-transform: scale($scale); /* Safari and Chrome */
+        -o-transform: scale($scale); /* Opera */
+        margin: 1em;
+    }
+
+    .basic-controls {
+        label {
+            width: 60px;
+            display: inline-block;
+            text-align: right;
+            vertical-align: top;
+            margin-right: 0.25em;
+        }
+    }
+}

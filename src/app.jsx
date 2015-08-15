@@ -7,7 +7,6 @@ var Mixer = require('./components/Mixer.jsx');
 
 var App = React.createClass({
 
-
   render: function() {
     return (
       <div id="app">

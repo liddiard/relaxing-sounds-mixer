@@ -1,0 +1,21 @@
+{
+    "cityTraffic": {
+        "name": "city traffic",
+        "file": "citytraffic.mp3",
+        "description": "We're testing things here.",
+        "attribution": {
+            "text": "Cool person",
+            "link": "http://example.com/"
+        }
+    },
+
+    "windyCanyon": {
+        "name": "windy canyon",
+        "file": "windycanyon.mp3",
+        "description": "We're testing things here.",
+        "attribution": {
+            "text": "Cool person",
+            "link": "http://example.com/"
+        }
+    }
+}

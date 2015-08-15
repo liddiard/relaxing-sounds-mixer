@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "watchify -v -o dist/bundle.js -t scssify -t reactify src/app.jsx",
+    "start": "watchify -v -d -o dist/bundle.js -t scssify -t reactify src/app.jsx",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/liddiard/relaxing-sounds-mixer#readme",
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "react-slider": "^0.5.1",
+    "wad": "git+https://git@github.com/rserota/wad.git"
   },
   "devDependencies": {
     "browserify": "^11.0.1",
