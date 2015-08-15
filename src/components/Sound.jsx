@@ -54,14 +54,14 @@ var Sound = React.createClass({
 
         <div className="basic-controls">
           <div className="slider">
-            <label>volume</label>
+            <label className="range">volume</label>
             <input name="vol" type="range" min="0" max="1" step="0.1"
                    defaultValue={this.props.vol}
                    onChange={this.props.handleSoundChange.bind(null, this.props.id)} />
             <span className="input-value">{this.props.vol}</span>
           </div>
           <div className="slider">
-            <label>pan</label>
+            <label className="range">pan</label>
             <input name="pan" type="range" min="-1" max="1" step="0.2"
                    defaultValue={this.props.pan}
                    onChange={this.props.handleSoundChange.bind(null, this.props.id)} />
@@ -72,10 +72,11 @@ var Sound = React.createClass({
         <div className="advanced-controls">
           <h3>Frequency filter</h3>
           {frequencyInputs}
+          <label className="range">frequency</label>
           <input name="passFreq" type="range" min="0" max="1" step="0.05"
                  defaultValue={this.props.passFreq}
                  onChange={this.props.handleSoundChange.bind(null, this.props.id)} />
-               <span className="input-value">{this.props.passFreq}</span>
+          <span className="input-value">{this.props.passFreq}</span>
         </div>
 
       </div>

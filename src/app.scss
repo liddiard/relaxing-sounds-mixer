@@ -21,13 +21,16 @@ html, body {
         margin: 1em;
     }
 
-    .basic-controls {
-        label {
-            width: 60px;
+    input[type=range] {
+        margin: 0 0.5em;
+    }
+
+    label {
+        &.range {
+            width: 65px;
             display: inline-block;
             text-align: right;
             vertical-align: top;
-            margin-right: 0.25em;
         }
     }
 }
