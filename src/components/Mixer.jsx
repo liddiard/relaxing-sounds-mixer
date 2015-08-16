@@ -35,9 +35,11 @@ var Mixer = React.createClass({
   },
 
   handleSoundChange: function(soundId, event) {
-    var input = event.target;
-    var fieldName = input.name.split('_')[0]; // remove unique id
-    var value = input.type === "checkbox" ? input.checked : input.value;
+    if (!Array.isArray(event)) { // ReactSlider's event is just an array with values
+      var input = event.target;
+      var fieldName = input.name.split('_')[0]; // remove unique id
+      var value = input.type === "checkbox" ? input.checked : input.value;
+    }
     var sounds = this.state.sounds;
     var sound = sounds[soundId];
 
@@ -60,10 +62,9 @@ var Mixer = React.createClass({
       case "pan":
         utils.setPanning(this.state.buffer, soundId, value);
         break;
-      case "pass":
-      case "passFreq":
-      default:
-        console.error("uncrecognized field name: " + fieldName);
+      default: // is pass filter
+        console.log(soundId, event, this);
+        utils.setFilter(this.state.buffer, soundId, this.props.staticRoot, event[0], event[1]);
     }
   },
 

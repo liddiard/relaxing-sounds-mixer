@@ -73,7 +73,8 @@ var Sound = React.createClass({
         <div className="advanced-controls">
           <label className="range">Frequency</label>
           <ReactSlider withBars name="passFreq" min={0} max={1} step={0.01}
-                       defaultValue={[0, 1]}>
+                       defaultValue={[0, 1]}
+                       onChange={this.props.handleSoundChange.bind(null, this.props.id)}>
             <div className="min">1</div>
             <div className="max">2</div>
           </ReactSlider>
