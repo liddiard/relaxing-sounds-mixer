@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactSlider = require('react-slider');
 
 
 var Sound = React.createClass({
@@ -62,7 +63,7 @@ var Sound = React.createClass({
           </div>
           <div className="slider">
             <label className="range">pan</label>
-            <input name="pan" type="range" min="-1" max="1" step="0.2"
+            <input name="pan" type="range" min="-1" max="1" step="0.1"
                    defaultValue={this.props.pan}
                    onChange={this.props.handleSoundChange.bind(null, this.props.id)} />
             <span className="input-value">{this.props.pan}</span>
@@ -70,13 +71,12 @@ var Sound = React.createClass({
         </div>
 
         <div className="advanced-controls">
-          <h3>Frequency filter</h3>
-          {frequencyInputs}
-          <label className="range">frequency</label>
-          <input name="passFreq" type="range" min="0" max="1" step="0.05"
-                 defaultValue={this.props.passFreq}
-                 onChange={this.props.handleSoundChange.bind(null, this.props.id)} />
-          <span className="input-value">{this.props.passFreq}</span>
+          <label className="range">Frequency</label>
+          <ReactSlider withBars name="passFreq" min={0} max={1} step={0.01}
+                       defaultValue={[0, 1]}>
+            <div className="min">1</div>
+            <div className="max">2</div>
+          </ReactSlider>
         </div>
 
       </div>
